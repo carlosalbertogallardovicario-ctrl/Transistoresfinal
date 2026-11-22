@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0f766e">
+  <meta name="description" content="EFA Oretana: transistores, simulador de circuitos, diagnóstico y cuestionarios para 1.º de CFGM SMR.">
+  <title>Transistores y diagnóstico | EFA Oretana</title>
+  <link rel="icon" type="image/jpeg" href="./logo-efa-oretana.jpeg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./estilos.css">
+<script type="importmap">
+{"imports":{
+"react":"https://esm.sh/react@19.0.0",
+"react-dom/client":"https://esm.sh/react-dom@19.0.0/client?external=react",
+"lucide-react":"https://esm.sh/lucide-react@0.546.0?external=react"
+}}
+</script>
+  <style>
+    .arranque {max-width:700px;margin:6vh auto 0;padding:2.5rem 1.75rem;text-align:center;font:16px/1.55 system-ui,Arial,sans-serif;color:#0f172a}
+    .arranque img {width:130px;height:auto;border-radius:8px}
+    .arranque h1 {font-size:clamp(23px,4vw,32px);margin:.9rem 0}
+    .arranque .ayuda {font-size:13px;color:#475569}
+    .arranque .alerta {display:none;margin-top:1.3rem;background:#fff7ed;padding:1rem;border:1px solid #fdba74;border-radius:10px;text-align:left}
+    .arranque .alerta strong {display:block;margin-bottom:.4rem}
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased font-sans selection:bg-emerald-700 selection:text-white">
+  <div id="root">
+    <main class="arranque" aria-live="polite">
+      <img src="./logo-efa-oretana.jpeg" alt="EFA Oretana">
+      <h1>Transistores y diagnóstico · SMR</h1>
+      <p>Cargando la aplicación didáctica…</p>
+      <p class="ayuda">Tarjetas, simulador, diagnóstico y cuestionarios.</p>
+      <div class="alerta" id="problema-carga">
+        <strong>No se ha podido iniciar la aplicación.</strong>
+        Comprueba tu conexión a Internet y vuelve a cargar la página con Ctrl + F5.
+        Los componentes React se descargan desde <code>esm.sh</code>; si el centro lo bloquea, la aplicación no podrá iniciarse.
+      </div>
+    </main>
+  </div>
+  <noscript><p>Para utilizar este recurso didáctico necesitas habilitar JavaScript en el navegador.</p></noscript>
+  <script>
+    // Mantiene un mensaje útil en lugar de una página vacía si un módulo remoto falla.
+    setTimeout(function () {
+      var p=document.getElementById('problema-carga');
+      if(p && document.querySelector('#root .arranque')) p.style.display='block';
+    }, 11000);
+    window.addEventListener('error', function(e) {
+      if (e.message && /module|script|import/i.test(e.message)) {
+        var p=document.getElementById('problema-carga');
+        if(p) p.style.display='block';
+      }
+    });
+  </script>
+  <script type="module" src="./aplicacion.js"></script>
+</body>
+</html>

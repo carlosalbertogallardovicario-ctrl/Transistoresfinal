@@ -1,0 +1,44 @@
+EFA ORETANA - TRANSISTORES Y DIAGNÓSTICO SMR
+ARCHIVOS LISTOS PARA GITHUB PAGES (VERSIÓN ESTÁTICA)
+==================================================
+
+ESTOS SON TODOS LOS ARCHIVOS NECESARIOS
+
+index.html                  Página principal
+estilos.css                 Todos los estilos de la aplicación
+aplicacion.js               Tarjetas, simulador, diagnósticos y cuestionarios
+logo-efa-oretana.jpeg       Imagen institucional
+.nojekyll                   Permite publicar sin procesar con Jekyll
+LEEME_PRIMERO.txt           Estas instrucciones (no afecta a la página)
+
+INSTRUCCIONES PARA TU REPOSITORIO
+https://github.com/carlosalbertogallardovicario-ctrl/Transistores
+
+1. DESCOMPRIME ESTE ZIP EN TU EQUIPO.
+2. Entra en el repositorio y asegúrate de estar en la rama main.
+3. Pulsa Add file > Upload files.
+4. Arrastra TODOS los archivos que ves al descomprimir. NO subas el ZIP.
+5. Si GitHub pregunta por archivos con nombres iguales, comprueba que has
+   reemplazado index.html con la versión de este paquete.
+6. Pulsa Commit changes.
+7. Settings > Pages > Build and deployment > Source: Deploy from a branch.
+   Branch: main; Folder: /(root). Pulsa Save.
+8. Abre https://carlosalbertogallardovicario-ctrl.github.io/Transistores/
+   y usa Ctrl + F5 para evitar una copia antigua en caché.
+
+IMPORTANTE
+- No hace falta crear 'estilos.css' ni 'aplicacion.js'. Ya están creados.
+- Los archivos antiguos .tsx/.ts pueden quedar en el repositorio: este
+  index.html ya no los carga. Puedes eliminarlos para no confundirte.
+- Esta versión estática utiliza React y Lucide desde https://esm.sh.
+  Se necesita conexión a Internet y que ese dominio no esté bloqueado.
+- Si aparece el aviso "No se ha podido iniciar la aplicación", puede
+  tratarse de un bloqueo de ese dominio; no es un problema del CSS.
+- No hay que instalar nada en el equipo del alumnado.
+- GitHub Pages es público. No publiques información personal del alumnado.
+
+COMPROBACIÓN RÁPIDA
+- 'index.html' debe estar en la RAÍZ del repositorio, no dentro de una carpeta.
+- 'estilos.css', 'aplicacion.js' y 'logo-efa-oretana.jpeg' deben estar
+  también en la RAÍZ, al mismo nivel que 'index.html'.
+- No incluyas 'src/main.tsx' en el HTML de la versión publicada.
